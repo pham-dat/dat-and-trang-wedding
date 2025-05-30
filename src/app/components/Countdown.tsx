@@ -8,21 +8,20 @@ export default function Countdown() {
     hours: number;
     minutes: number;
     seconds: number;
-    total: number;
+    diff: number;
   } | null>(null);
 
   useEffect((): (() => void) => {
     const updateCountdown: () => void = (): void => {
       const now = new Date();
       const diff: number = EVENTS.celebration.date.getTime() - now.getTime();
-      const total: number = Math.max(0, diff);
-      const days: number = Math.floor(total / (1000 * 60 * 60 * 24));
-      const hours: number = Math.floor((total / (1000 * 60 * 60)) % 24);
-      const minutes: number = Math.floor((total / (1000 * 60)) % 60);
-      const seconds: number = Math.floor((total / 1000) % 60);
+      const days: number = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours: number = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes: number = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds: number = Math.floor((diff / 1000) % 60);
 
       // Update the state with the calculated time left
-      setTimeLeft({ days, hours, minutes, seconds, total });
+      setTimeLeft({ days, hours, minutes, seconds, diff });
     };
 
     // Initial call to set the countdown immediately
@@ -34,13 +33,16 @@ export default function Countdown() {
     return (): void => clearInterval(timer);
   }, []);
 
-  if (!timeLeft) return null;
+  if (!timeLeft || timeLeft.diff <= 0) return null;
 
   return (
-    <div className="font-subtitle text-dark-green text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl">
-      {timeLeft.total === 0
-        ? 'Today is the big day!'
-        : `${timeLeft.days}D | ${timeLeft.hours}H |  ${timeLeft.minutes}M |  ${timeLeft.seconds}S`}
+    <div className="font-subtitle text-dark-green text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl flex divide-x text-center">
+      {(['days', 'hours', 'minutes', 'seconds'] as const).map((unit) => (
+        <span key={unit} className="w-[5ch]">
+          {timeLeft[unit]}
+          {unit.charAt(0).toUpperCase()}
+        </span>
+      ))}
     </div>
   );
 }
