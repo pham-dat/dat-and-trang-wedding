@@ -1,0 +1,6 @@
+# Prettier
+node_modules/
+build/
+.next/
+coverage/
+*.log
