@@ -21,7 +21,7 @@ export default function SectionSeparator({ right = false, type = 1 }: SectionSep
     <Image
       src={src}
       alt=""
-      className={`absolute pointer-events-none select-none w-20 -top-10 md:w-30 md:-top-15 ${right ? 'md:right-10' : 'md:left-10'} motion-reduce:animate-pulse pulse-delay-0 ${rotate}`}
+      className={`absolute pointer-events-none select-none w-20 -top-10 md:w-30 md:-top-15 ${right ? 'md:right-10' : 'md:left-10'} animate-pulse pulse-delay-0 ${rotate}`}
       aria-hidden="true"
     />
   );
