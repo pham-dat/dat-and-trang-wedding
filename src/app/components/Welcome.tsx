@@ -42,7 +42,8 @@ export default function Welcome({ id }: WelcomeProps) {
         </p>
 
         <p>
-          On <span className="font-black">2024-11-11</span>, we got engaged! 💍
+          On <span className="font-black">2024-11-11</span>, we got engaged!{' '}
+          <span className="animate-pulse">💍</span>
         </p>
 
         <p>

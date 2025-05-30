@@ -25,6 +25,7 @@ export default function Hero() {
           src={heroImg}
           alt="Animated illustration of Đạt & Trang kissing"
           className="z-1 w-50 sm:w-60 md:w-70 lg:w-80 xl:w-90 2xl:w-100"
+          priority
         />
       </div>
 
