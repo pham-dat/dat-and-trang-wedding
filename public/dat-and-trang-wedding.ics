@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dat-and-trang-wedding//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:dat-and-trang-wedding-1@wedding
+DTSTAMP:20250516T120000Z
+DTSTART;TZID=Europe/Paris:20251025T104000
+DTEND;TZID=Europe/Paris:20251025T150000
+SUMMARY:Civil ceremony at Mairie du 16ᵉ arrondissement de Paris
+LOCATION:71 Av. Henri Martin, 75016 Paris
+DESCRIPTION:Join us for the civil ceremony at the Mairie du 16ᵉ arrondissement de Paris.
+END:VEVENT
+BEGIN:VEVENT
+UID:dat-and-trang-wedding-2@wedding
+DTSTAMP:20250516T120000Z
+DTSTART;TZID=Europe/Paris:20260328T150000
+DTEND;TZID=Europe/Paris:20260329T130000
+SUMMARY:Wedding celebration at Château de Dommerville
+LOCATION:55 Rue de la Plaine, 91670 Angerville
+DESCRIPTION:Join us for the wedding celebration at Château de Dommerville.
+END:VEVENT
+END:VCALENDAR

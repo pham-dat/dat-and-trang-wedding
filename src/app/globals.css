@@ -1,26 +1,57 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-dark-brown: #533c2a;
+  --color-dark-yellow: #e9c78a;
+  --color-light-yellow: #f7e6ca;
+  --color-light-green: #b9b379;
+  --color-dark-green: #938d4f;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.font-headline {
+  font-family: var(--font-playfair-display-sc), 'Times New Roman', Times, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-title,
+h1 {
+  font-family: var(--font-playfair-display), 'Times New Roman', Times, serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-subtitle {
+  font-family: var(--font-playfair), 'Times New Roman', Times, serif;
+}
+
+.font-text {
+  font-family: var(--font-be-vietnam-pro), Arial, Helvetica, sans-serif;
+}
+
+.pulse-delay-0 {
+  animation-delay: 0ms;
+}
+.pulse-delay-1 {
+animation-delay: 100ms;
+}
+.pulse-delay-2 {
+  animation-delay: 200ms;
+}
+.pulse-delay-3 {
+  animation-delay: 300ms;
+}
+.pulse-delay-4 {
+  animation-delay: 400ms;
+}
+.pulse-delay-5 {
+  animation-delay: 500ms;
+}
+.pulse-delay-6 {
+  animation-delay: 600ms;
+}
+.pulse-delay-7 {
+  animation-delay: 700ms;
+}
+.pulse-delay-8 {
+  animation-delay: 800ms;
+}
+.pulse-delay-9 {
+  animation-delay: 900ms;
 }
