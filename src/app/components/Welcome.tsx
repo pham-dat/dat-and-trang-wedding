@@ -18,16 +18,16 @@ export default function Welcome({ id }: WelcomeProps) {
       <SectionSeparator />
 
       <div className="flex flex-col gap-3 px-5 sm:px-10 md:pr-0 md:pl-10 lg:pl-20 xl:pl-30 2xl:pl-50 text-justify md:py-30">
-        <h1 className="text-3xl lg:text-5xl mb-2 text-center">You&apos;re invited!</h1>
+        <h1 className="text-5xl lg:text-6xl mb-2 text-center">You&apos;re invited!</h1>
 
         <p>
-          We believe every love story is beautiful, but ours began with a{' '}
-          <span className="font-black">tarte tatin</span> at a friend&apos;s birthday. It started
-          unexpectedly, over a shared dessert. One glance, one smile...
+          Ours beautiful love story began with a <span className="font-black">tarte tatin</span> at
+          a friend&apos;s birthday. It started unexpectedly, over a shared dessert. One glance, one
+          smile...
         </p>
 
         <p>
-          Later, under the lights and energy of a <span className="font-black">rock</span> concert,
+          Later, under the lights and energy of a <span className="font-black">rock concert</span>,
           our eyes met again, and this time, everything around us seemed to pause.
         </p>
 

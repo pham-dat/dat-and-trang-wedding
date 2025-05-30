@@ -18,7 +18,7 @@ export default function Contribution({ id }: ContributionProps) {
     >
       <SectionSeparator right />
 
-      <h1 className="text-3xl lg:text-5xl mb-2 text-center">
+      <h1 className="text-5xl lg:text-6xl mb-2 text-center">
         We request your &quot;presents&quot;
       </h1>
 
@@ -39,7 +39,7 @@ export default function Contribution({ id }: ContributionProps) {
         href="https://www.paypal.com/paypalme/Crocodile29292"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 px-5 py-3 inline-flex items-center gap-3 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown transition-all font-semibold text-xl lg:text-2xl"
+        className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 px-5 py-3 inline-flex items-center gap-3 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown font-semibold text-xl lg:text-2xl"
       >
         Contribute via PayPal
         <ArrowTopRightOnSquareIcon className="w-6 lg:w-10" aria-hidden="true" />

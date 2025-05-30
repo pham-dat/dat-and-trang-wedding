@@ -35,7 +35,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
         <button
           type="button"
           role="link"
-          className="rounded text-dark-brown hover:bg-light-yellow focus:outline-none focus:ring focus:ring-dark-brown transition-all cursor-pointer"
+          className="rounded text-dark-brown hover:bg-light-yellow focus:outline-none focus:ring focus:ring-dark-brown cursor-pointer"
           aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
           onClick={(): void => setOpen((open: boolean): boolean => !open)}
         >
@@ -54,7 +54,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
             <li key={section.id}>
               <a
                 href={`#${section.id}`}
-                className="block p-3 focus:outline-none hover:bg-light-green focus:bg-dark-green transition-all"
+                className="block p-3 focus:outline-none hover:bg-light-green focus:bg-dark-green"
                 onClick={(): void => setOpen(false)}
               >
                 {section.label}
@@ -79,7 +79,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
             <li key={section.id}>
               <a
                 href={`#${section.id}`}
-                className="px-2 py-1 rounded hover:bg-light-yellow focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown transition-all"
+                className="px-2 py-1 rounded hover:bg-light-yellow focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown"
               >
                 {section.label}
               </a>

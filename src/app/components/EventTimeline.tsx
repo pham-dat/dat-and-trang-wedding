@@ -18,7 +18,7 @@ export default function EventTimeline({ id }: EventTimelineProps) {
     >
       <SectionSeparator type={4} />
 
-      <h1 className="text-3xl lg:text-5xl mb-2 text-center">Event Timeline</h1>
+      <h1 className="text-5xl lg:text-6xl mb-2 text-center">Event Timeline</h1>
 
       <p className="text-justify italic max-w-7xl">
         Please note: The civil ceremony and the wedding celebration are on different dates and at
@@ -50,7 +50,7 @@ export default function EventTimeline({ id }: EventTimelineProps) {
                   href={event.map}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline hover:text-dark-green  focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown transition-all inline-flex items-center justify-center gap-1 rounded"
+                  className="underline hover:text-dark-green  focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown inline-flex items-center justify-center gap-1 rounded"
                 >
                   View on map
                   <ArrowTopRightOnSquareIcon className="w-5" aria-hidden="true" />
@@ -78,7 +78,7 @@ export default function EventTimeline({ id }: EventTimelineProps) {
         role="button"
         href="/dat-and-trang-wedding.ics"
         download
-        className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 px-5 py-3 inline-flex items-center gap-3 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown transition-all font-semibold text-xl lg:text-2xl"
+        className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 px-5 py-3 inline-flex items-center gap-3 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown font-semibold text-xl lg:text-2xl"
       >
         Add to calendar
         <CalendarDaysIcon className="w-6 lg:w-10" aria-hidden="true" />

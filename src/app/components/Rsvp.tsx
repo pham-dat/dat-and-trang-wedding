@@ -17,7 +17,7 @@ export default function Rsvp({ id }: RsvpProps) {
     >
       <SectionSeparator right type={2} />
 
-      <h1 className="text-3xl lg:text-5xl mb-2 text-center">RSVP</h1>
+      <h1 className="text-5xl lg:text-6xl mb-2 text-center">RSVP</h1>
 
       <p>We kindly ask you to let us know if you&apos;ll be able to join our celebration.</p>
 
@@ -29,7 +29,7 @@ export default function Rsvp({ id }: RsvpProps) {
         href={RSVP_FORM_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 px-5 py-3 inline-flex items-center gap-3 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown transition-all font-semibold text-xl lg:text-2xl"
+        className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 px-5 py-3 inline-flex items-center gap-3 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown font-semibold text-xl lg:text-2xl"
       >
         RSVP via this form
         <ArrowTopRightOnSquareIcon className="w-6 lg:w-10" aria-hidden="true" />
