@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Be_Vietnam_Pro, Playfair, Playfair_Display, Playfair_Display_SC } from 'next/font/google';
 
@@ -50,6 +51,7 @@ export default function RootLayout({
         className={`${beVietnamPro.variable} ${playfair.variable} ${playfairDisplay.variable}  ${playfairDisplaySc.variable} antialiased bg-[url(/background-mobile.webp)] md:bg-[url(/background.webp)] bg-fixed bg-cover font-text text-dark-brown scroll-smooth selection:bg-dark-green selection:text-light-yellow lg:text-lg xl:text-xl`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
