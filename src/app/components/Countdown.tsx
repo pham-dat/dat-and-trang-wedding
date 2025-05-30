@@ -36,12 +36,16 @@ export default function Countdown() {
   if (!timeLeft || timeLeft.diff <= 0) return null;
 
   return (
-    <div className="font-subtitle text-dark-green text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl flex divide-x text-center">
+    <div className="font-subtitle text-dark-green flex divide-x text-center">
       {(['days', 'hours', 'minutes', 'seconds'] as const).map((unit) => (
-        <span key={unit} className="w-[5ch]">
-          {timeLeft[unit]}
-          {unit.charAt(0).toUpperCase()}
-        </span>
+        <div key={unit} className="flex flex-col w-[5ch]">
+          <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl">
+            {timeLeft[unit]}
+          </span>
+          <span className="text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
+            {unit.charAt(0).toUpperCase()}
+          </span>
+        </div>
       ))}
     </div>
   );
