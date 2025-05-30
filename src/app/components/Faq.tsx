@@ -44,7 +44,7 @@ export default function Faq({ id }: FaqProps) {
         reach out!
       </p>
 
-      <ul className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 flex flex-col gap-10 text-center max-w-7xl">
+      <ul className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col gap-10 text-center max-w-7xl">
         {FAQS.map((faq) => (
           <li key={faq.q}>
             <p className="font-semibold">

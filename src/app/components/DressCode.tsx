@@ -19,7 +19,7 @@ export default function DressCode({ id }: DressCodeProps) {
 
       <h1 className="text-5xl lg:text-6xl mb-2 text-center">Dress Code</h1>
 
-      <div className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 flex flex-col md:flex-row items-center gap-5 lg:gap-10 xl:gap-20 2xl:gap-30">
+      <div className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col md:flex-row items-center gap-5 lg:gap-10 xl:gap-20 2xl:gap-30">
         <Image
           src={dressCodeImg}
           alt="A color pattern inspired by vietnamese flower tiles"

@@ -22,7 +22,7 @@ export default function Contribution({ id }: ContributionProps) {
         We request your &quot;presents&quot;
       </h1>
 
-      <div className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 flex flex-col lg:flex-row items-center gap-5 lg:gap-10 xl:gap-20 2xl:gap-30">
+      <div className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col lg:flex-row items-center gap-5 lg:gap-10 xl:gap-20 2xl:gap-30">
         <Image
           src={presents}
           alt={
@@ -43,10 +43,10 @@ export default function Contribution({ id }: ContributionProps) {
             href="https://www.paypal.com/paypalme/Crocodile29292"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 px-5 py-3 inline-flex items-center gap-3 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown font-semibold text-xl lg:text-2xl"
+            className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 py-3 inline-flex items-center gap-2 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown font-semibold text-lg lg:text-xl"
           >
             Contribute via PayPal
-            <ArrowTopRightOnSquareIcon className="w-6 lg:w-10" aria-hidden="true" />
+            <ArrowTopRightOnSquareIcon className="w-5 lg:w-6" aria-hidden="true" />
           </a>
         </div>
       </div>

@@ -25,20 +25,20 @@ export default function EventTimeline({ id }: EventTimelineProps) {
         different venues. We would be delighted if you could join us for both!
       </p>
 
-      <div className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 flex flex-col lg:flex-row justify-center items-center lg:items-stretch w-full gap-5 lg:gap-10 xl:gap-20 2xl:gap-30">
+      <div className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col lg:flex-row justify-center items-center lg:items-stretch w-full gap-5 lg:gap-10 xl:gap-20 2xl:gap-30">
         {[EVENTS.civil, EVENTS.celebration].map((event) => (
           <div
             key={event.type}
             className="w-full max-w-xl bg-light-yellow shadow rounded-t-lg text-center"
           >
-            <div className="bg-dark-yellow p-3 font-title font-semibold text-2xl lg:text-3xl rounded-t-lg">
+            <div className="bg-dark-yellow p-3 font-title font-semibold text-xl lg:text-2xl rounded-t-lg">
               {formatDate(event.date)}
             </div>
 
-            <div className="flex flex-col items-center px-1 gap-3 lg:gap-5 py-3 lg:py-5">
-              <h2 className="font-subtitle font-semibold text-2xl lg:text-3xl">{event.type}</h2>
+            <div className="flex flex-col items-center px-1 gap-3 py-3">
+              <h2 className="font-subtitle font-semibold text-xl lg:text-2xl">{event.type}</h2>
 
-              <div className="mb-3 lg:mb-5">
+              <div>
                 <div className="inline-flex items-center justify-center gap-1">
                   <MapPinIcon className="w-5" aria-hidden="true" />
                   <span className="font-semibold">{event.venueName}</span>
@@ -57,7 +57,7 @@ export default function EventTimeline({ id }: EventTimelineProps) {
                 </a>
               </div>
 
-              <ul>
+              <ul className="mt-2">
                 {event.timeline.map((item) => (
                   <li
                     key={item.time}
@@ -78,10 +78,10 @@ export default function EventTimeline({ id }: EventTimelineProps) {
         role="button"
         href="/dat-and-trang-wedding.ics"
         download
-        className="mt-2 lg:mt-5 xl:mt-6 2xl:mt-7 px-5 py-3 inline-flex items-center gap-3 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown font-semibold text-xl lg:text-2xl"
+        className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 py-3 inline-flex items-center gap-2 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown font-semibold text-lg lg:text-xl"
       >
         Add to calendar
-        <CalendarDaysIcon className="w-6 lg:w-10" aria-hidden="true" />
+        <CalendarDaysIcon className="w-5 lg:w-6" aria-hidden="true" />
       </a>
     </section>
   );
