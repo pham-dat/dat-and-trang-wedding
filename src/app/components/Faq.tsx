@@ -35,7 +35,7 @@ export default function Faq({ id }: FaqProps) {
       id={id}
       className="relative flex flex-col items-center gap-3 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 py-20 md:py-30"
     >
-      <SectionSeparator type={4} />
+      <SectionSeparator right type={4} />
 
       <h1 className="text-5xl lg:text-6xl mb-2 text-center">FAQ</h1>
 

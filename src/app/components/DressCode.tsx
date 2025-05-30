@@ -15,7 +15,7 @@ export default function DressCode({ id }: DressCodeProps) {
       id={id}
       className="relative flex flex-col items-center text-justify gap-3 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 py-20 md:py-30"
     >
-      <SectionSeparator right type={3} />
+      <SectionSeparator type={3} />
 
       <h1 className="text-5xl lg:text-6xl mb-2 text-center">Dress Code</h1>
 
