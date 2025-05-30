@@ -23,6 +23,8 @@ export default function DressCode({ id }: DressCodeProps) {
         <Image
           src={dressCodeImg}
           alt="A color pattern inspired by vietnamese flower tiles"
+          width={798}
+          height={882}
           className="w-full max-w-xs sm:max-w-sm md:w-1/2 md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl"
         />
 

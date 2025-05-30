@@ -23,14 +23,16 @@ export default function MainPage() {
   return (
     <div>
       <NavigationBar sections={sections} />
-      <Hero />
-      <Welcome id={sections[0].id} />
-      <EventTimeline id={sections[1].id} />
-      <Rsvp id={sections[2].id} />
-      <DressCode id={sections[3].id} />
-      <Contribution id={sections[4].id} />
-      <Faq id={sections[5].id} />
-      <Message />
+      <main>
+        <Hero />
+        <Welcome id={sections[0].id} />
+        <EventTimeline id={sections[1].id} />
+        <Rsvp id={sections[2].id} />
+        <DressCode id={sections[3].id} />
+        <Contribution id={sections[4].id} />
+        <Faq id={sections[5].id} />
+        <Message />
+      </main>
     </div>
   );
 }
