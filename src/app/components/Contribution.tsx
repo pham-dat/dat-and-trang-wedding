@@ -18,7 +18,7 @@ export default function Contribution({ id }: ContributionProps) {
     >
       <SectionSeparator right />
 
-      <h1 className="text-3xl lg:text-5xl font-bold italic mb-2 text-center">
+      <h1 className="text-3xl lg:text-5xl mb-2 text-center">
         We request your &quot;presents&quot;
       </h1>
 

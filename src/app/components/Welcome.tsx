@@ -18,9 +18,7 @@ export default function Welcome({ id }: WelcomeProps) {
       <SectionSeparator />
 
       <div className="flex flex-col gap-3 px-5 sm:px-10 md:pr-0 md:pl-10 lg:pl-20 xl:pl-30 2xl:pl-50 text-justify md:py-30">
-        <h1 className="text-3xl lg:text-5xl font-bold italic mb-2 text-center">
-          You&apos;re invited!
-        </h1>
+        <h1 className="text-3xl lg:text-5xl mb-2 text-center">You&apos;re invited!</h1>
 
         <p>
           We believe every love story is beautiful, but ours began with a{' '}

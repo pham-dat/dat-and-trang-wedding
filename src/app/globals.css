@@ -12,8 +12,11 @@
   font-family: var(--font-playfair-display-sc), 'Times New Roman', Times, serif;
 }
 
-.font-title,
 h1 {
+    font-family: var(--font-yellowtail), 'Times New Roman', Arial, Helvetica, sans-serif;
+}
+
+.font-title {
   font-family: var(--font-playfair-display), 'Times New Roman', Times, serif;
 }
 

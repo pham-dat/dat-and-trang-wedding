@@ -18,7 +18,7 @@ export default function EventTimeline({ id }: EventTimelineProps) {
     >
       <SectionSeparator type={4} />
 
-      <h1 className="text-3xl lg:text-5xl font-bold italic mb-2 text-center">Event Timeline</h1>
+      <h1 className="text-3xl lg:text-5xl mb-2 text-center">Event Timeline</h1>
 
       <p className="text-justify italic max-w-7xl">
         Please note: The civil ceremony and the wedding celebration are on different dates and at

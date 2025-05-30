@@ -37,7 +37,7 @@ export default function Faq({ id }: FaqProps) {
     >
       <SectionSeparator type={4} />
 
-      <h1 className="text-3xl lg:text-5xl font-bold italic mb-2 text-center">FAQ</h1>
+      <h1 className="text-3xl lg:text-5xl mb-2 text-center">FAQ</h1>
 
       <p className="text-justify">
         Here are some frequently asked questions. If you have any other questions, feel free to

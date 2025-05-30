@@ -1,6 +1,12 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { Be_Vietnam_Pro, Playfair, Playfair_Display, Playfair_Display_SC } from 'next/font/google';
+import {
+  Be_Vietnam_Pro,
+  Playfair,
+  Playfair_Display,
+  Playfair_Display_SC,
+  Yellowtail,
+} from 'next/font/google';
 
 import { EVENTS } from './constants';
 import { formatDate } from './helpers';
@@ -35,6 +41,13 @@ const playfairDisplaySc = Playfair_Display_SC({
   subsets: ['latin', 'vietnamese'],
 });
 
+const yellowtail = Yellowtail({
+  variable: '--font-yellowtail',
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin'],
+});
+
 export const metadata: Metadata = {
   title: "Đạt & Trang's wedding",
   description: `Join us to celebrate the wedding of Đạt & Trang on ${formatDate(EVENTS.celebration.date)}.`,
@@ -48,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${beVietnamPro.variable} ${playfair.variable} ${playfairDisplay.variable}  ${playfairDisplaySc.variable} antialiased bg-[url(/background-mobile.webp)] md:bg-[url(/background.webp)] bg-fixed bg-cover font-text text-dark-brown scroll-smooth selection:bg-dark-green selection:text-light-yellow lg:text-lg xl:text-xl`}
+        className={`${beVietnamPro.variable} ${playfair.variable} ${playfairDisplay.variable} ${playfairDisplaySc.variable} ${yellowtail.variable} antialiased bg-[url(/background-mobile.webp)] md:bg-[url(/background.webp)] bg-fixed bg-cover font-text text-dark-brown scroll-smooth selection:bg-dark-green selection:text-light-yellow lg:text-lg xl:text-xl`}
       >
         {children}
         <SpeedInsights />

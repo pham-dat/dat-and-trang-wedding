@@ -10,7 +10,7 @@ export default function Message() {
     <div className="relative bg-light-yellow/50 flex flex-col items-center text-justify gap-3 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 pt-20 pb-1">
       <SectionSeparator right type={2} />
 
-      <h1 className="text-3xl lg:text-5xl font-bold italic mb-2 text-center">
+      <h1 className="text-3xl lg:text-5xl mb-2 text-center">
         We can&apos;t wait to celebrate with you!
       </h1>
 

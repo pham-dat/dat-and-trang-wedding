@@ -17,7 +17,7 @@ export default function Rsvp({ id }: RsvpProps) {
     >
       <SectionSeparator right type={2} />
 
-      <h1 className="text-3xl lg:text-5xl font-bold italic mb-2 text-center">RSVP</h1>
+      <h1 className="text-3xl lg:text-5xl mb-2 text-center">RSVP</h1>
 
       <p>We kindly ask you to let us know if you&apos;ll be able to join our celebration.</p>
 
