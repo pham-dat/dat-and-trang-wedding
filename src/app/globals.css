@@ -9,23 +9,23 @@
 }
 
 .font-headline {
-  font-family: var(--font-playfair-display-sc), 'Times New Roman', Times, serif;
+  font-family: var(--font-playfair-display-sc);
 }
 
 h1 {
-    font-family: var(--font-yellowtail), 'Times New Roman', Arial, Helvetica, sans-serif;
+    font-family: var(--font-yellowtail);
 }
 
 .font-title {
-  font-family: var(--font-playfair-display), 'Times New Roman', Times, serif;
+  font-family: var(--font-playfair-display);
 }
 
 .font-subtitle {
-  font-family: var(--font-playfair), 'Times New Roman', Times, serif;
+  font-family: var(--font-playfair);
 }
 
 .font-text {
-  font-family: var(--font-be-vietnam-pro), Arial, Helvetica, sans-serif;
+  font-family: var(--font-be-vietnam-pro);
 }
 
 .pulse-delay-0 {
