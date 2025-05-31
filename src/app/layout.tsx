@@ -59,9 +59,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full overflow-hidden">
       <body
-        className={`${beVietnamPro.variable} ${playfair.variable} ${playfairDisplay.variable} ${playfairDisplaySc.variable} ${yellowtail.variable} antialiased bg-[url(/background-mobile.webp)] md:bg-[url(/background.webp)] bg-fixed bg-cover font-text text-dark-brown scroll-smooth selection:bg-dark-green selection:text-light-yellow lg:text-lg xl:text-xl`}
+        className={`${beVietnamPro.variable} ${playfair.variable} ${playfairDisplay.variable} ${playfairDisplaySc.variable} ${yellowtail.variable} antialiased bg-[url(/background-mobile.webp)] md:bg-[url(/background.webp)] bg-fixed bg-cover font-text text-dark-brown h-full overflow-auto scroll-smooth selection:bg-dark-green selection:text-light-yellow lg:text-lg xl:text-xl`}
       >
         {children}
         <SpeedInsights />

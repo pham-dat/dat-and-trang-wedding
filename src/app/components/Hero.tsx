@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 import { EVENTS } from '@/app/constants';
@@ -14,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row items-center justify-center min-h-screen gap-3 sm:gap-5 md:gap-10 lg:gap-20 xl:gap-30 2xl:gap-50 pb-15 md:pb-22 overflow-x-clip"
+      className="flex flex-col md:flex-row items-center justify-center min-h-screen gap-3 sm:gap-5 md:gap-10 lg:gap-20 xl:gap-30 2xl:gap-50 pb-15 md:pb-22"
     >
       <div className="relative flex flex-col items-center gap-1 md:gap-2 lg:gap-3 xl:gap-5 2xl:gap-6">
         <HeroDecorativeSprites />

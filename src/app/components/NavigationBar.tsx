@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
 
@@ -11,7 +11,7 @@ interface NavigationBarProps {
 export default function NavigationBar({ sections }: NavigationBarProps) {
   const [open, setOpen] = useState(false);
 
-  React.useEffect((): void => {
+  useEffect((): void => {
     if (open) {
       document.body.style.overflow = 'hidden';
     } else {
