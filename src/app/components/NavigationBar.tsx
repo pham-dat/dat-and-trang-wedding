@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
 
@@ -23,14 +24,16 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
     <nav className={`sticky top-0 z-2 ${open ? 'h-screen' : ''}`}>
       {/* Mobile Bar */}
       <div className="md:hidden flex items-center justify-between px-5 py-3 bg-dark-yellow/90 backdrop-blur-xs">
-        <a
-          href="#"
+        <Link
+          href=""
           aria-label="Go to top"
           className="focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown"
-          onClick={(): void => setOpen(false)}
+          onClick={() => {
+            setOpen(false);
+          }}
         >
           <Image src={logo} alt="Đạt & Trang logo" className="w-5" />
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -66,13 +69,13 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
 
       {/* Desktop Bar */}
       <div className="hidden md:flex items-center justify-between px-10 lg:px-11 xl:px-12 2xl:px-15 py-3 bg-dark-yellow/90 backdrop-blur-xs">
-        <a
-          href="#"
+        <Link
+          href=""
           aria-label="Go to top"
           className="focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown"
         >
           <Image src={logo} alt="Đạt & Trang logo" className="w-10" />
-        </a>
+        </Link>
 
         <ul className="flex gap-1 font-title font-semibold lg:text-lg xl:text-xl 2xl:text-2xl">
           {sections.map((section) => (
