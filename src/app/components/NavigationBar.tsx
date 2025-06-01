@@ -55,13 +55,13 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
         <ul className="md:hidden h-full flex flex-col bg-light-yellow/80 backdrop-blur-md text-center text-xl font-title font-semibold">
           {sections.map((section) => (
             <li key={section.id}>
-              <a
+              <Link
                 href={`#${section.id}`}
                 className="block p-3 focus:outline-none hover:bg-light-green focus:bg-dark-green"
                 onClick={(): void => setOpen(false)}
               >
                 {section.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -80,12 +80,12 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
         <ul className="flex gap-1 font-title font-semibold lg:text-lg xl:text-xl 2xl:text-2xl">
           {sections.map((section) => (
             <li key={section.id}>
-              <a
+              <Link
                 href={`#${section.id}`}
                 className="px-2 py-1 rounded hover:bg-light-yellow focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown"
               >
                 {section.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
