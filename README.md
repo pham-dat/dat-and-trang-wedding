@@ -1,5 +1,6 @@
 # Our wedding Website
 
+https://dat-and-trang-wedding.vercel.app/
 This project is a visually appealing, user-friendly wedding website built with Next.js (TypeScript, Tailwind CSS).
 
 ## Features
@@ -13,21 +14,3 @@ This project is a visually appealing, user-friendly wedding website built with N
 - A contribution section with a link to Paypal for guests to contribute.
 - An FAQ section with common questions and answers.
 - A messsage from the couple signed with their names and their logo.
-
-## Getting Started
-
-To run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Deployment
-
-You can deploy this app to Vercel or any platform supporting Next.js.
-
----
-
-For more details, see the [Next.js documentation](https://nextjs.org/docs).
