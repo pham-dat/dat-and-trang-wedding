@@ -9,14 +9,17 @@ interface NavigationBarProps {
   sections: { id: string; label: string }[];
 }
 
+// TODO: Focus on the first link when opening the mobile dropdown and keyboard navigation
+// TODO: Focus on the section when clicking a link in the menu
+
 export default function NavigationBar({ sections }: NavigationBarProps) {
   const [open, setOpen] = useState(false);
 
   useEffect((): void => {
     if (open) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('overflow-hidden');
     } else {
-      document.body.style.overflow = '';
+      document.body.classList.remove('overflow-hidden');
     }
   }, [open]);
 
@@ -27,26 +30,22 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
         <Link
           href=""
           aria-label="Go to top"
-          className="focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown"
+          className=" w-6 rounded focus:outline-none focus:ring focus:ring-offset-1"
           onClick={() => {
             setOpen(false);
           }}
         >
-          <Image src={logo} alt="Đạt & Trang logo" className="w-5" />
+          <Image src={logo} alt="Đạt & Trang logo" className="pointer-events-none select-none" />
         </Link>
 
         <button
           type="button"
           role="link"
-          className="rounded text-dark-brown hover:bg-light-yellow focus:outline-none focus:ring focus:ring-dark-brown cursor-pointer"
+          className="w-10 rounded text-dark-brown hover:bg-light-yellow focus:outline-none focus:ring cursor-pointer"
           aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
           onClick={(): void => setOpen((open: boolean): boolean => !open)}
         >
-          {open ? (
-            <XMarkIcon className="w-8" aria-hidden="true" />
-          ) : (
-            <Bars3Icon className="w-8" aria-hidden="true" />
-          )}
+          {open ? <XMarkIcon aria-hidden="true" /> : <Bars3Icon aria-hidden="true" />}
         </button>
       </div>
 
@@ -57,7 +56,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
             <li key={section.id}>
               <Link
                 href={`#${section.id}`}
-                className="block p-3 focus:outline-none hover:bg-light-green focus:bg-dark-green"
+                className="block p-3 focus:outline-none hover:bg-light-green focus:bg-dark-green focus:text-light-yellow"
                 onClick={(): void => setOpen(false)}
               >
                 {section.label}
@@ -72,9 +71,9 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
         <Link
           href=""
           aria-label="Go to top"
-          className="focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown"
+          className=" w-10 rounded focus:outline-none focus:ring focus:ring-offset-1"
         >
-          <Image src={logo} alt="Đạt & Trang logo" className="w-10" />
+          <Image src={logo} alt="Đạt & Trang logo" className="pointer-events-none select-none" />
         </Link>
 
         <ul className="flex gap-1 font-title font-semibold lg:text-lg xl:text-xl 2xl:text-2xl">
@@ -82,7 +81,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
             <li key={section.id}>
               <Link
                 href={`#${section.id}`}
-                className="px-2 py-1 rounded hover:bg-light-yellow focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown"
+                className="px-2 py-1 rounded hover:bg-light-yellow focus:outline-none focus:ring"
               >
                 {section.label}
               </Link>

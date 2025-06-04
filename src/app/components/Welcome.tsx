@@ -54,7 +54,7 @@ export default function Welcome({ id }: WelcomeProps) {
       <Image
         src={welcomeImg}
         alt="Đạt & Trang in Paris at midnight"
-        className="rounded-lg md:rounded-none w-xs md:w-1/2 max-w-3xl"
+        className="pointer-events-none select-none rounded-lg md:rounded-none w-xs md:w-1/2 max-w-3xl"
       />
     </section>
   );

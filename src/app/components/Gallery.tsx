@@ -154,8 +154,7 @@ export default function Gallery({ id }: GalleryProps) {
             key={photoIndex}
             type="button"
             aria-label={`Open photo ${photoIndex + 1} of ${PHOTOS.length}`}
-            className="focus:outline-none focus:ring focus:ring-offset-1 focus:scale-110 hover:scale-110 transition-transform ease-in-out rounded-3xl cursor-pointer select-none shrink-0 w-70"
-            draggable={false}
+            className="focus:outline-none focus:ring focus:ring-offset-1 focus:scale-110 hover:scale-110 transition-transform ease-in-out rounded-3xl cursor-pointer shrink-0 w-70"
             onClick={(): void => {
               if (isDragging) return;
               setCurrentPhotoIndex(photoIndex);
@@ -165,8 +164,7 @@ export default function Gallery({ id }: GalleryProps) {
             <Image
               src={src}
               alt={`Photo ${photoIndex + 1}`}
-              className="h-full object-cover rounded-3xl"
-              draggable={false}
+              className="pointer-events-none select-none h-full object-cover rounded-3xl"
             />
           </button>
         ))}
@@ -194,8 +192,7 @@ export default function Gallery({ id }: GalleryProps) {
           <Image
             src={PHOTOS[currentPhotoIndex]}
             alt={`Photo ${currentPhotoIndex + 1}`}
-            draggable={false}
-            className="select-none max-h-[70vh] w-auto shadow-2xl"
+            className="pointer-events-none select-none max-h-[70vh] w-auto shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           />
 

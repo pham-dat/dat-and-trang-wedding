@@ -27,7 +27,7 @@ export default function Contribution({ id }: ContributionProps) {
           alt={
             "A hamster holding an invitation written &quot;We request your presents&quot; and asking a hedgehog &quot;I'm going to throw a party! How does this invitation look?&quot; The hedgehog replies, &quot;There's a typo. It's 'presence' with a 'c', not a 't'.&quot; The hamster says, &quot;But I want them to bring us presents.&quot;"
           }
-          className="w-full lg:w-1/2 max-w-md"
+          className="pointer-events-none select-none w-full lg:w-1/2 max-w-md"
         />
 
         <div className="flex flex-col gap-3 items-center">

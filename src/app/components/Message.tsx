@@ -29,7 +29,7 @@ export default function Message() {
       <Image
         src={logo}
         alt="Đạt & Trang logo"
-        className="w-10 sm:w-11 md:w-12 lg:w-15 xl:w-16 2xl:w-17"
+        className="pointer-events-none select-none w-10 sm:w-11 md:w-12 lg:w-15 xl:w-16 2xl:w-17"
       />
 
       <footer className="mt-10 text-xs">

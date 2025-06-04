@@ -18,12 +18,16 @@ export default function Hero() {
       <div className="relative flex flex-col items-center gap-1 md:gap-2 lg:gap-3 xl:gap-5 2xl:gap-6">
         <HeroDecorativeSprites />
 
-        <Image src={saveTheDateImg} alt="Save the date!" className="z-1 w-30" />
+        <Image
+          src={saveTheDateImg}
+          alt="Save the date!"
+          className="pointer-events-none select-none z-1 w-30"
+        />
 
         <Image
           src={heroImg}
           alt="Animated illustration of Đạt & Trang kissing"
-          className="z-1 w-50 sm:w-60 md:w-70 lg:w-80 xl:w-90 2xl:w-100"
+          className="pointer-events-none select-none z-1 w-50 sm:w-60 md:w-70 lg:w-80 xl:w-90 2xl:w-100"
           priority
         />
       </div>
