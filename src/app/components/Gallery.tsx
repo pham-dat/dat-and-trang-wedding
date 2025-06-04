@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, KeyboardEvent } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
@@ -89,18 +89,33 @@ export default function Gallery({ id }: GalleryProps) {
       track.scrollLeft -= velocity;
     };
 
+    let animationFrameId: number;
+
     const loop = () => {
       updateScrollPosition();
-      window.requestAnimationFrame(loop);
+      animationFrameId = window.requestAnimationFrame(loop);
     };
 
     track.addEventListener('mousedown', handleMouseDown);
     loop();
 
+    // Cleanup event listener on unmount and stop the animation loop to prevent memory leaks
     return () => {
       track.removeEventListener('mousedown', handleMouseDown);
+      window.cancelAnimationFrame(animationFrameId);
     };
   }, []);
+
+  const restoreFocusToSelectedPhoto = useCallback(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const buttons = track.querySelectorAll('button');
+
+    if (buttons && buttons[currentPhotoIndex]) {
+      (buttons[currentPhotoIndex] as HTMLButtonElement).focus();
+    }
+  }, [currentPhotoIndex]);
 
   // Keyboard navigation for modal
   useEffect(() => {
@@ -109,7 +124,11 @@ export default function Gallery({ id }: GalleryProps) {
     const handleKey = (event: unknown): void => {
       const keyboardEvent = event as KeyboardEvent;
 
-      if (keyboardEvent.key === 'Escape') setModalOpen(false);
+      if (keyboardEvent.key === 'Escape') {
+        // Close the modal when Escape is pressed
+        setModalOpen(false);
+        setTimeout(restoreFocusToSelectedPhoto, 0);
+      }
 
       if (keyboardEvent.key === 'ArrowLeft')
         setCurrentPhotoIndex(
@@ -127,13 +146,61 @@ export default function Gallery({ id }: GalleryProps) {
 
     // Cleanup event listener on unmount
     return () => window.removeEventListener('keydown', handleKey);
-  }, [modalOpen]);
+  }, [modalOpen, currentPhotoIndex, restoreFocusToSelectedPhoto]);
 
   // Focus trap for modal
   useEffect(() => {
-    if (modalOpen && modalRef.current) {
-      modalRef.current.focus();
-    }
+    if (!modalOpen || !modalRef.current) return;
+
+    const modal: HTMLDivElement = modalRef.current;
+
+    // Find all focusable elements inside the modal
+    const focusableSelectors: string[] = [
+      'button:not([disabled])',
+      '[href]',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+    ];
+
+    const focusableElements = modal.querySelectorAll<HTMLElement>(focusableSelectors.join(','));
+
+    if (focusableElements.length === 0) return;
+    const firstElement: HTMLElement = focusableElements[0];
+    const lastElement: HTMLElement = focusableElements[focusableElements.length - 1];
+
+    // Focus the modal or first element
+    setTimeout((): void => {
+      (document.activeElement === modal ? firstElement : modal).focus();
+    }, 0);
+
+    const handleTrap = (event: unknown) => {
+      const e = event as KeyboardEvent;
+      if (e.key !== 'Tab') return;
+      if (focusableElements.length === 0) return;
+
+      // Shift+Tab
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        // Tab
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    };
+
+    modal.addEventListener('keydown', handleTrap as EventListener);
+
+    // Cleanup event listener on unmount
+    return () => {
+      modal.removeEventListener('keydown', handleTrap as EventListener);
+    };
   }, [modalOpen]);
 
   return (
@@ -178,7 +245,10 @@ export default function Gallery({ id }: GalleryProps) {
           role="dialog"
           aria-label="Photo slideshow"
           className="fixed inset-0 z-2 bg-dark-brown/90 backdrop-blur focus:outline-none flex items-center justify-center text-dark-yellow px-5"
-          onClick={() => setModalOpen(false)}
+          onClick={() => {
+            setModalOpen(false);
+            setTimeout(restoreFocusToSelectedPhoto, 0);
+          }}
         >
           <button
             type="button"
