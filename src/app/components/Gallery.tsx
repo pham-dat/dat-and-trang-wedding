@@ -234,6 +234,17 @@ export default function Gallery({ id }: GalleryProps) {
     };
   }, [modalOpen]);
 
+  // Track loading state for each photo
+  const [loaded, setLoaded] = useState(Array(PHOTOS.length).fill(false));
+
+  const handleImageLoad = (photoIndex: number): void => {
+    setLoaded((prev) => {
+      const next = [...prev];
+      next[photoIndex] = true;
+      return next;
+    });
+  };
+
   return (
     <section
       id={id}
@@ -249,23 +260,28 @@ export default function Gallery({ id }: GalleryProps) {
         className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 w-full overflow-x-auto flex gap-8 pt-6 pb-9 cursor-grab"
       >
         {PHOTOS.map((src, photoIndex: number) => (
-          <button
-            key={photoIndex}
-            type="button"
-            aria-label={`Open photo ${photoIndex + 1} of ${PHOTOS.length}`}
-            className="focus:outline-none focus:ring focus:ring-offset-1 focus:scale-110 hover:scale-110 transition-transform ease-in-out rounded-3xl cursor-pointer shrink-0 w-70"
-            onClick={(): void => {
-              if (isDragging) return;
-              setCurrentPhotoIndex(photoIndex);
-              setModalOpen(true);
-            }}
-          >
-            <Image
-              src={src}
-              alt={`Photo ${photoIndex + 1}`}
-              className="pointer-events-none select-none h-full object-cover rounded-3xl"
-            />
-          </button>
+          <div key={photoIndex} className="relative shrink-0 w-70">
+            {!loaded[photoIndex] && (
+              <div className="absolute inset-0 bg-dark-yellow rounded-3xl animate-pulse" />
+            )}
+            <button
+              type="button"
+              aria-label={`Open photo ${photoIndex + 1} of ${PHOTOS.length}`}
+              className="focus:outline-none focus:ring focus:ring-offset-1 focus:scale-110 hover:scale-110 transition-transform ease-in-out rounded-3xl cursor-pointer h-full"
+              onClick={(): void => {
+                if (isDragging) return;
+                setCurrentPhotoIndex(photoIndex);
+                setModalOpen(true);
+              }}
+            >
+              <Image
+                src={src}
+                alt={`Photo ${photoIndex + 1}`}
+                className={`pointer-events-none select-none h-full object-cover rounded-3xl transition-opacity ease-out duration-3000 ${loaded[photoIndex] ? 'opacity-100' : 'opacity-0'}`}
+                onLoad={() => handleImageLoad(photoIndex)}
+              />
+            </button>
+          </div>
         ))}
       </div>
 
