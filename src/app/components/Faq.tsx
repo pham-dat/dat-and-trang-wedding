@@ -31,6 +31,7 @@ export default function Faq({ id }: FaqProps) {
   return (
     <section
       id={id}
+      tabIndex={-1}
       className="relative flex flex-col items-center gap-3 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 py-20 md:py-30"
     >
       <SectionSeparator type={4} />

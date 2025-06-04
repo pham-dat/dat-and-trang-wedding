@@ -10,7 +10,6 @@ interface NavigationBarProps {
 }
 
 // TODO: Focus on the first link when opening the mobile dropdown and keyboard navigation
-// TODO: Focus on the section when clicking a link in the menu
 
 export default function NavigationBar({ sections }: NavigationBarProps) {
   const [open, setOpen] = useState(false);
@@ -22,6 +21,17 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
       document.body.classList.remove('overflow-hidden');
     }
   }, [open]);
+
+  // Focus the section after navigation
+  function focusSectionById(id: string) {
+    setTimeout(() => {
+      const section = document.getElementById(id);
+
+      if (section) {
+        section.focus();
+      }
+    }, 0);
+  }
 
   return (
     <nav className={`sticky top-0 z-2 ${open ? 'h-screen' : ''}`}>
@@ -57,7 +67,10 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
               <Link
                 href={`#${section.id}`}
                 className="block p-3 focus:outline-none hover:bg-light-green focus:bg-dark-green focus:text-light-yellow"
-                onClick={(): void => setOpen(false)}
+                onClick={(): void => {
+                  setOpen(false);
+                  focusSectionById(section.id);
+                }}
               >
                 {section.label}
               </Link>
@@ -82,6 +95,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
               <Link
                 href={`#${section.id}`}
                 className="px-2 py-1 rounded hover:bg-light-yellow focus:outline-none focus:ring"
+                onClick={(): void => focusSectionById(section.id)}
               >
                 {section.label}
               </Link>

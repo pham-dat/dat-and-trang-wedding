@@ -13,10 +13,41 @@ import photo7 from '@/../public/gallery/photo-7.jpg';
 import photo8 from '@/../public/gallery/photo-8.jpg';
 import photo9 from '@/../public/gallery/photo-9.jpg';
 import photo10 from '@/../public/gallery/photo-10.jpg';
+import photo11 from '@/../public/gallery/photo-11.jpg';
+import photo12 from '@/../public/gallery/photo-12.jpg';
+import photo13 from '@/../public/gallery/photo-13.jpg';
+import photo14 from '@/../public/gallery/photo-14.jpg';
+import photo15 from '@/../public/gallery/photo-15.jpg';
+import photo16 from '@/../public/gallery/photo-16.jpg';
+import photo17 from '@/../public/gallery/photo-17.jpg';
+import photo18 from '@/../public/gallery/photo-18.jpg';
+import photo19 from '@/../public/gallery/photo-19.jpg';
+import photo20 from '@/../public/gallery/photo-20.jpg';
 
 import SectionSeparator from '@/app/components/SectionSeparator';
 
-const PHOTOS = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10];
+const PHOTOS = [
+  photo1,
+  photo2,
+  photo3,
+  photo4,
+  photo5,
+  photo6,
+  photo7,
+  photo8,
+  photo9,
+  photo10,
+  photo11,
+  photo12,
+  photo13,
+  photo14,
+  photo15,
+  photo16,
+  photo17,
+  photo18,
+  photo19,
+  photo20,
+];
 
 interface GalleryProps {
   id: string;
@@ -206,6 +237,7 @@ export default function Gallery({ id }: GalleryProps) {
   return (
     <section
       id={id}
+      tabIndex={-1}
       className="bg-light-yellow/50 relative flex flex-col items-center text-justify gap-3 py-20 md:py-30"
     >
       <SectionSeparator right type={2} />
