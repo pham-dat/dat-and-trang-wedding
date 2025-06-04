@@ -42,7 +42,7 @@ export default function Contribution({ id }: ContributionProps) {
             href="https://www.paypal.com/paypalme/Crocodile29292"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 py-3 inline-flex items-center gap-2 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-brown font-semibold text-lg lg:text-xl"
+            className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 py-3 inline-flex items-center gap-2 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-green font-semibold text-lg lg:text-xl"
           >
             Contribute via PayPal
             <ArrowTopRightOnSquareIcon className="w-5 lg:w-6" aria-hidden="true" />

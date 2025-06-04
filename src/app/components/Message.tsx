@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 import logo from '@/../public/logo.png';
@@ -7,8 +6,8 @@ import SectionSeparator from '@/app/components/SectionSeparator';
 
 export default function Message() {
   return (
-    <div className="bg-light-yellow/50 relative flex flex-col items-center text-justify gap-3 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 pt-20 pb-1">
-      <SectionSeparator type={2} />
+    <div className="relative flex flex-col items-center text-justify gap-3 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 pt-20 pb-1">
+      <SectionSeparator type={3} />
 
       <h1 className="text-5xl lg:text-6xl mb-2 text-center">
         We can&apos;t wait to celebrate with you!

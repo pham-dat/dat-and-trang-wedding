@@ -8,6 +8,7 @@ import Rsvp from '@/app/components/Rsvp';
 import DressCode from '@/app/components/DressCode';
 import Contribution from '@/app/components/Contribution';
 import Faq from '@/app/components/Faq';
+import Gallery from '@/app/components/Gallery';
 import Message from '@/app/components/Message';
 
 export default function MainPage() {
@@ -18,6 +19,7 @@ export default function MainPage() {
     { id: 'dress-code', label: 'Dress code' },
     { id: 'contribution', label: 'Contribution' },
     { id: 'faq', label: 'FAQ' },
+    { id: 'gallery', label: 'Gallery' },
   ];
 
   return (
@@ -31,6 +33,7 @@ export default function MainPage() {
         <DressCode id={sections[3].id} />
         <Contribution id={sections[4].id} />
         <Faq id={sections[5].id} />
+        <Gallery id={sections[6].id} />
         <Message />
       </main>
     </div>
