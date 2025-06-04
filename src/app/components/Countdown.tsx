@@ -38,7 +38,7 @@ export default function Countdown() {
   return (
     <div className="font-subtitle text-dark-green flex divide-x text-center">
       {(['days', 'hours', 'minutes', 'seconds'] as const).map((unit) => (
-        <div key={unit} className="flex flex-col w-[5ch]">
+        <div key={unit} className="flex flex-col min-w-[5ch] 2xl:min-w-[10ch]">
           <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl">
             {timeLeft[unit]}
           </span>
