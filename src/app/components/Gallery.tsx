@@ -255,34 +255,41 @@ export default function Gallery({ id }: GalleryProps) {
 
       <h1 className="text-5xl lg:text-6xl mb-2 text-center">Gallery</h1>
 
-      <div
-        ref={trackRef}
-        className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 w-full overflow-x-auto flex gap-8 pt-6 pb-9 cursor-grab"
-      >
-        {PHOTOS.map((src, photoIndex: number) => (
-          <div key={photoIndex} className="relative shrink-0 w-70">
-            {!loaded[photoIndex] && (
-              <div className="absolute inset-0 bg-dark-yellow rounded-3xl animate-pulse" />
-            )}
-            <button
-              type="button"
-              aria-label={`Open photo ${photoIndex + 1} of ${PHOTOS.length}`}
-              className="focus:outline-none focus:ring focus:ring-offset-1 focus:scale-110 hover:scale-110 transition-transform ease-in-out rounded-3xl cursor-pointer h-full"
-              onClick={(): void => {
-                if (isDragging) return;
-                setCurrentPhotoIndex(photoIndex);
-                setModalOpen(true);
-              }}
-            >
-              <Image
-                src={src}
-                alt={`Photo ${photoIndex + 1}`}
-                className={`pointer-events-none select-none h-full object-cover rounded-3xl transition-opacity ease-out duration-3000 ${loaded[photoIndex] ? 'opacity-100' : 'opacity-0'}`}
-                onLoad={() => handleImageLoad(photoIndex)}
-              />
-            </button>
-          </div>
-        ))}
+      <div className="relative w-full">
+        {/* Left blur overlay */}
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-5 sm:w-10 lg:w-20 xl:w-30 2xl:w-50 z-1 bg-gradient-to-r from-light-yellow/50 to-transparent" />
+        {/* Right blur overlay */}
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-5 sm:w-10 lg:w-20 xl:w-30 2xl:w-50 z-1 bg-gradient-to-l from-light-yellow/50 to-transparent" />
+
+        <div
+          ref={trackRef}
+          className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 w-full overflow-x-auto flex gap-8 pt-6 pb-9 cursor-grab"
+        >
+          {PHOTOS.map((src, photoIndex: number) => (
+            <div key={photoIndex} className="relative shrink-0 w-70">
+              {!loaded[photoIndex] && (
+                <div className="absolute inset-0 bg-dark-yellow rounded-3xl animate-pulse" />
+              )}
+              <button
+                type="button"
+                aria-label={`Open photo ${photoIndex + 1} of ${PHOTOS.length}`}
+                className="focus:outline-none focus:ring focus:ring-offset-1 focus:scale-110 hover:scale-110 transition-transform ease-in-out rounded-3xl cursor-pointer h-full"
+                onClick={(): void => {
+                  if (isDragging) return;
+                  setCurrentPhotoIndex(photoIndex);
+                  setModalOpen(true);
+                }}
+              >
+                <Image
+                  src={src}
+                  alt={`Photo ${photoIndex + 1}`}
+                  className={`pointer-events-none select-none h-full object-cover rounded-3xl transition-opacity ease-out duration-3000 ${loaded[photoIndex] ? 'opacity-100' : 'opacity-0'}`}
+                  onLoad={() => handleImageLoad(photoIndex)}
+                />
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
 
       {modalOpen && (
