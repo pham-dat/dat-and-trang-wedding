@@ -266,7 +266,7 @@ export default function Gallery({ id }: GalleryProps) {
           className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 w-full overflow-x-auto flex gap-8 pt-6 pb-9 cursor-grab"
         >
           {PHOTOS.map((src, photoIndex: number) => (
-            <div key={photoIndex} className="relative shrink-0 w-70">
+            <div key={photoIndex} className="relative shrink-0 w-70 max-h-107">
               {!loaded[photoIndex] && (
                 <div className="absolute inset-0 bg-dark-yellow rounded-3xl animate-pulse" />
               )}
