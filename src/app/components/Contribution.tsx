@@ -35,19 +35,32 @@ export default function Contribution({ id }: ContributionProps) {
           <div className="flex flex-col gap-3 text-justify">
             <p>Your presence at our wedding is the greatest gift of all!</p>
             <p>
-              If you wish to contribute, you can do so via PayPal or via the card box at the venue.
+              If you wish to contribute, you can do so via PayPal or pay with card via Revolut using
+              the buttons below. Otherwise we also have a card box at the venue.
             </p>
           </div>
 
-          <a
-            href="https://www.paypal.com/paypalme/Crocodile29292"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 py-3 inline-flex items-center gap-2 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-green font-semibold text-lg lg:text-xl"
-          >
-            Contribute via PayPal
-            <ArrowTopRightOnSquareIcon className="w-5 lg:w-6" aria-hidden="true" />
-          </a>
+          <div className="text-center">
+            <a
+              href="https://revolut.me/trang97"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 py-3 inline-flex items-center gap-2 rounded-full shadow bg-dark-green text-white hover:bg-light-green hover:text-dark-brown focus:outline-none focus:ring focus:ring-offset-1 focus:ring-light-green font-semibold text-lg lg:text-xl w-full justify-center"
+            >
+              Card (Revolut)
+              <ArrowTopRightOnSquareIcon className="w-5 lg:w-6" aria-hidden="true" />
+            </a>
+
+            <a
+              href="https://www.paypal.com/paypalme/Crocodile29292"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 py-3 inline-flex  items-center gap-2 rounded-full shadow bg-dark-green text-white hover:bg-light-green hover:text-dark-brown focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-green font-semibold text-lg lg:text-xl w-full justify-center"
+            >
+              PayPal
+              <ArrowTopRightOnSquareIcon className="w-5 lg:w-6" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

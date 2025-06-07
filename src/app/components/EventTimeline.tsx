@@ -78,7 +78,7 @@ export default function EventTimeline({ id }: EventTimelineProps) {
         role="button"
         href="/dat-and-trang-wedding.ics"
         download
-        className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 py-3 inline-flex items-center gap-2 rounded-full shadow bg-dark-green text-white hover:bg-light-green focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-green font-semibold text-lg lg:text-xl"
+        className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 px-5 py-3 inline-flex items-center gap-2 rounded-full shadow bg-dark-green text-white hover:bg-light-green hover:text-dark-brown focus:outline-none focus:ring focus:ring-offset-1 focus:ring-dark-green font-semibold text-lg lg:text-xl"
       >
         Add to calendar
         <CalendarDaysIcon className="w-5 lg:w-6" aria-hidden="true" />
