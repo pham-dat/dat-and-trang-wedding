@@ -117,7 +117,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
         <Link
           href=""
           aria-label="Go to top"
-          className=" w-6 rounded focus:outline-none focus:ring focus:ring-offset-1"
+          className="w-6 rounded focus:outline-none focus:ring focus:ring-offset-1"
           onClick={() => {
             setOpen(false);
           }}

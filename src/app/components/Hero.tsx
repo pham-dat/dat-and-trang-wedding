@@ -27,7 +27,7 @@ export default function Hero() {
         <Image
           src={heroImg}
           alt="Animated illustration of Đạt & Trang kissing"
-          className="pointer-events-none select-none z-1 w-50 sm:w-60 md:w-70 lg:w-80 xl:w-90 2xl:w-100"
+          className="pointer-events-none select-none z-1 w-50 md:w-60 lg:w-70 xl:w-80 2xl:w-100"
           priority
         />
       </div>
