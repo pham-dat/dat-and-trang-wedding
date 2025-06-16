@@ -13,7 +13,7 @@ export default function Welcome({ id }: WelcomeProps) {
     <section
       id={id}
       tabIndex={-1}
-      className="bg-light-yellow/50 relative flex flex-col md:flex-row items-center gap-5 md:gap-10 lg:gap-20 xl:gap-30 2xl:gap-50 py-20 md:py-0"
+      className="bg-light-yellow/50 relative flex flex-col md:flex-row items-center gap-5 md:gap-10 lg:gap-20 xl:gap-30 2xl:gap-50 py-20 md:py-0 focus:outline-none"
     >
       <SectionSeparator />
 

@@ -14,7 +14,7 @@ export default function Contribution({ id }: ContributionProps) {
     <section
       id={id}
       tabIndex={-1}
-      className="bg-light-yellow/50 relative flex flex-col items-center text-justify gap-3 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 py-20 md:py-30"
+      className="bg-light-yellow/50 relative flex flex-col items-center text-justify gap-3 px-5 sm:px-10 lg:px-20 xl:px-30 2xl:px-50 py-20 md:py-30 focus:outline-none"
     >
       <SectionSeparator right />
 

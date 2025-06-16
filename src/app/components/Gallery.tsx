@@ -250,7 +250,7 @@ export default function Gallery({ id }: GalleryProps) {
     <section
       id={id}
       tabIndex={-1}
-      className="bg-light-yellow/50 relative flex flex-col items-center text-justify gap-3 py-20 md:py-30"
+      className="bg-light-yellow/50 relative flex flex-col items-center text-justify gap-3 py-20 md:py-30 focus:outline-none"
     >
       <SectionSeparator right type={2} />
 
