@@ -59,6 +59,7 @@ export default function Gallery({ id }: GalleryProps) {
 
   const trackRef = useRef<HTMLDivElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
+  const swipeStart = useRef<{ x: number; y: number } | null>(null);
 
   // Handle dragging to scroll
   // Use a state to track if the user is dragging
@@ -300,9 +301,38 @@ export default function Gallery({ id }: GalleryProps) {
           role="dialog"
           aria-label="Photo slideshow"
           className="fixed inset-0 z-2 bg-dark-brown/90 backdrop-blur focus:outline-none flex items-center justify-center text-dark-yellow px-5"
-          onClick={() => {
+          onClick={(): void => {
             setModalOpen(false);
             setTimeout(restoreFocusToSelectedPhoto, 0);
+          }}
+          onTouchStart={(event): void => {
+            if (event.touches.length === 1) {
+              swipeStart.current = {
+                x: event.touches[0].clientX,
+                y: event.touches[0].clientY,
+              };
+            }
+          }}
+          onTouchEnd={(event): void => {
+            if (!swipeStart.current || event.changedTouches.length !== 1) return;
+
+            const startX: number = swipeStart.current.x;
+            const startY: number = swipeStart.current.y;
+            const endX: number = event.changedTouches[0].clientX;
+            const endY: number = event.changedTouches[0].clientY;
+            const dx: number = endX - startX;
+            const dy: number = endY - startY;
+            swipeStart.current = null;
+
+            if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+              if (dx > 0) {
+                setCurrentPhotoIndex(
+                  (c: number): number => (c - 1 + PHOTOS.length) % PHOTOS.length
+                );
+              } else {
+                setCurrentPhotoIndex((c: number): number => (c + 1) % PHOTOS.length);
+              }
+            }
           }}
         >
           <button
