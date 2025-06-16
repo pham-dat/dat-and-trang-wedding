@@ -21,8 +21,8 @@ export default function Welcome({ id }: WelcomeProps) {
         <h1 className="text-5xl lg:text-6xl mb-2 text-center">You&apos;re invited!</h1>
 
         <p>
-          Ours beautiful love story began with a <span className="font-black">tarte tatin</span> at
-          a friend&apos;s birthday. It started unexpectedly, over a shared dessert. One glance, one
+          Our beautiful love story began with a <span className="font-black">tarte tatin</span> at a
+          friend&apos;s birthday. It started unexpectedly, over a shared dessert. One glance, one
           smile...
         </p>
 
@@ -35,10 +35,11 @@ export default function Welcome({ id }: WelcomeProps) {
           From there, we slowly got to know each other. Conversations flowed naturally,{' '}
           <span className="font-black">memes</span> were exchanged, and we found our own rhythm.
           Those chats turned into endless &quot;
-          <span className="font-black">nuits blanches</span>.&quot; We walking through the quiet
+          <span className="font-black">nuits blanches</span>.&quot; We walked through the quiet
           streets of <span className="font-black">Paris</span>, discovering the city and each other
-          at the same time. Since then, our story has been filled with sincerity, connection, and
-          joy.
+          at the same time. We once lay together for hours, watching the{' '}
+          <span className="font-black">Perseid meteor shower</span>. Since then, our story has been
+          filled with sincerity, connection, and joy.
         </p>
 
         <p>
@@ -47,7 +48,7 @@ export default function Welcome({ id }: WelcomeProps) {
         </p>
 
         <p>
-          Now, we&apos;re ready for the next chapter and so happy to share this special day with
+          Now, we&apos;re ready for the next chapter and are so happy to share this special day with
           you.
         </p>
       </div>
