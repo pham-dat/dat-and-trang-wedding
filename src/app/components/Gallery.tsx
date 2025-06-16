@@ -344,12 +344,13 @@ export default function Gallery({ id }: GalleryProps) {
             <XMarkIcon aria-hidden="true" />
           </button>
 
-          <Image
-            src={PHOTOS[currentPhotoIndex]}
-            alt={`Photo ${currentPhotoIndex + 1}`}
-            className="pointer-events-none select-none max-h-[70vh] w-auto shadow-2xl"
-            onClick={(event) => event.stopPropagation()}
-          />
+          <div onClick={(event) => event.stopPropagation()}>
+            <Image
+              src={PHOTOS[currentPhotoIndex]}
+              alt={`Photo ${currentPhotoIndex + 1}`}
+              className="pointer-events-none select-none max-h-[70vh] w-auto shadow-2xl"
+            />
+          </div>
 
           <div
             className="absolute bottom-0 p-10 flex items-center justify-center"
