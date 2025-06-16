@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
 import SectionSeparator from '@/app/components/SectionSeparator';
@@ -22,6 +24,11 @@ export default function Rsvp({ id }: RsvpProps) {
       <p>We kindly ask you to let us know if you&apos;ll be able to join our celebration.</p>
 
       <p>Please RSVP using the form below so we can plan for your presence.</p>
+
+      <p>
+        On the RSVP form, you can also choose your menu option and suggest songs you want to add to
+        our wedding playlist!
+      </p>
 
       <p>We can&apos;t wait to celebrate this special day with you!</p>
 

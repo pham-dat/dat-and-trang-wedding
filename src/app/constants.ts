@@ -6,7 +6,7 @@ export const EVENTS = {
     date: new Date('2025-10-25T00:00:00+02:00'), // Paris time: 2025-10-25T00:00:00+02:00 (CEST)
     type: 'Civil ceremony',
     timeline: [
-      { time: '10:40', event: 'Arrivals & reception' },
+      { time: '10:30', event: 'Arrivals & reception' },
       { time: '11:00', event: 'Ceremony' },
       { time: '11:20', event: 'Photos' },
       { time: '12:00', event: 'Picnic' },

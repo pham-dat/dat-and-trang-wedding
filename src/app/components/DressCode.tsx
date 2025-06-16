@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Image from 'next/image';
 
 import dressCodeImg from '@/../public/dress-code.png';
