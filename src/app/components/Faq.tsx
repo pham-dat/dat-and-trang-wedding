@@ -9,7 +9,7 @@ interface FaqProps {
 const FAQS = [
   {
     q: 'Why are the celebrations happening on two different dates?',
-    a: 'The civil ceremony is scheduled based on the earliest available date at the town hall. We also chose to separate the celebrations so we could take our time and prepare the main wedding day with love and care without rushing any moment. Plus, this way, you have two chances not to miss our celebrations!',
+    a: 'The civil ceremony is scheduled based on the earliest available date at the town hall. We also chose to separate the celebrations so we could take our time and prepare the main wedding day with love and care without rushing any moment. Plus, this way, you have double chances not to miss our celebrations!',
   },
   {
     q: 'Can I bring a plus one?',
