@@ -24,7 +24,10 @@ export default function Rsvp({ id }: RsvpProps) {
       <div className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col gap-3 text-center max-w-7xl">
         <p>We kindly ask you to let us know if you&apos;ll be able to join our celebration.</p>
 
-        <p>Please RSVP using the form below so we can plan for your presence.</p>
+        <p>
+          RSVP using the form below so we can plan for your presence. Please do it as soon as
+          possible, preferably before November 2025.
+        </p>
 
         <p>
           On this form, you can choose your menu option, let us know about any allergens and suggest
