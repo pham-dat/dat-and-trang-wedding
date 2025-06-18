@@ -21,7 +21,7 @@ export default function Rsvp({ id }: RsvpProps) {
 
       <h1 className="text-5xl lg:text-6xl mb-2 text-center">RSVP</h1>
 
-      <div className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col gap-1 text-center max-w-7xl">
+      <div className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col gap-3 text-center max-w-7xl">
         <p>We kindly ask you to let us know if you&apos;ll be able to join our celebration.</p>
 
         <p>Please RSVP using the form below so we can plan for your presence.</p>

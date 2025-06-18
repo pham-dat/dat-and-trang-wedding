@@ -21,11 +21,11 @@ const FAQS = [
   },
   {
     q: 'Transportation and parking?',
-    a: "Guests are kindly asked to arrange their own transportation. For the civil ceremony, public transport is available: Métro line 9 to \"Rue de la Pompe\" station or nearby bus lines. For the main venue: There's a large private parking area available. If you need assistance with planning your trip, don't hesitate to reach out, we'll be happy to help!",
+    a: 'We kindly ask guests to arrange their own transportation. For the civil ceremony, public transportation is the best option. For the main venue, public transportation is less frequent, so private transportation or taxis are preferable. A large private parking area is available at the venue. To help protect the environment, we encourage ride sharing. After the party, please do not drive if you have been drinking. Breathalyzers will be available. If you are unable to drive, we strongly encourage you to leave your car in the parking lot and retrieve it at brunch the following day. If you need help with transportation arrangements, we are happy to assist. Please let us know by indicating this on the RSVP form.',
   },
   {
     q: 'Accommodation?',
-    a: "If you'd like to stay late and spend the night nearby, please plan your accommodation in advance. Depending on how many guests are staying, we might organise something so please let us know on the RSVP form if you'd be interested!",
+    a: 'There are no rooms available at the venue, so please plan your accommodation nearby in advance. If you need assistance, feel free to reach out.',
   },
 ];
 
@@ -45,7 +45,7 @@ export default function Faq({ id }: FaqProps) {
         reach out!
       </p>
 
-      <ul className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col gap-10 text-center max-w-7xl">
+      <ul className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col gap-10 text-center max-w-7xl text-justify">
         {FAQS.map((faq) => (
           <li key={faq.q}>
             <p className="font-semibold">

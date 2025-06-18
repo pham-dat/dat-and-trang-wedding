@@ -115,7 +115,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
   return (
     <nav className={`sticky top-0 z-2 ${open ? 'h-dvh' : ''}`}>
       {/* Mobile Bar */}
-      <div className="xl:hidden flex items-center justify-between px-5 py-3 bg-dark-yellow/90 backdrop-blur-xs">
+      <div className="md:hidden flex items-center justify-between px-5 py-3 bg-dark-yellow/90 backdrop-blur-xs">
         <Link
           href=""
           aria-label="Go to top"
@@ -146,7 +146,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
         <ul
           id="mobile-menu"
           ref={menuRef}
-          className="xl:hidden h-full flex flex-col bg-light-yellow/80 backdrop-blur-md text-center text-xl font-title font-semibold"
+          className="md:hidden h-full flex flex-col bg-light-yellow/80 backdrop-blur-md text-center text-xl font-title font-semibold"
           role="menu"
         >
           {sections.map((section, index) => (
@@ -174,7 +174,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
       )}
 
       {/* Desktop Bar */}
-      <div className="hidden xl:flex items-center justify-between xl:px-12 2xl:px-15 py-3 bg-dark-yellow/90 backdrop-blur-xs">
+      <div className="hidden md:flex items-center justify-between px-10 lg:px-11 xl:px-12 2xl:px-15 py-3 bg-dark-yellow/90 backdrop-blur-xs">
         <Link
           href=""
           aria-label="Go to top"
@@ -183,7 +183,7 @@ export default function NavigationBar({ sections }: NavigationBarProps) {
           <Image src={logo} alt="Đạt & Trang logo" className="pointer-events-none select-none" />
         </Link>
 
-        <ul className="flex gap-1 font-title font-semibold xl:text-xl 2xl:text-2xl">
+        <ul className="flex gap-1 font-title font-semibold lg:text-lg xl:text-xl 2xl:text-2xl">
           {sections.map((section) => (
             <li key={section.id}>
               <Link
