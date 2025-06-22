@@ -10,6 +10,7 @@ This project is a Next.js (TypeScript, Tailwind CSS) wedding website of Đạt &
 - An event timeline section with dates, addresses (with link to Google Maps) and detailed timeline for 2 events: Civil ceremony and Wedding celebration.
 - An RSVP section with a link to Google Form for guests to confirm their attendance.
 - A dress code section with a color palette and a brief description of its inspiration.
-- A contribution section with a link to Paypal for guests to contribute.
+- A registry section with a link to Paypal for guests to contribute.
 - An FAQ section with common questions and answers.
+- A gallery section with photos of the couple.
 - A messsage from the couple signed with their names and their logo.

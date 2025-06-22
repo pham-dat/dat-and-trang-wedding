@@ -7,11 +7,11 @@ import presents from '@/../public/presents.jpg';
 
 import SectionSeparator from '@/app/components/SectionSeparator';
 
-interface ContributionProps {
+interface RegistryProps {
   id: string;
 }
 
-export default function Contribution({ id }: ContributionProps) {
+export default function Registry({ id }: RegistryProps) {
   return (
     <section
       id={id}
@@ -37,8 +37,8 @@ export default function Contribution({ id }: ContributionProps) {
           <div className="flex flex-col gap-3 text-justify">
             <p>Your presence at our wedding is the greatest gift of all!</p>
             <p>
-              If you wish to contribute, you can do so via PayPal or pay with card via Revolut using
-              the buttons below. Otherwise we also have a card box at the venue.
+              Howerver, if you wish to contribute, you can do so via PayPal or pay with card via
+              Revolut using the buttons below. Otherwise we also have a card box at the venue.
             </p>
           </div>
 
