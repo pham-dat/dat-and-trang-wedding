@@ -56,11 +56,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Đạt & Trang's wedding",
     description: `Join us to celebrate the wedding of Đạt & Trang on ${formatDate(EVENTS.celebration.date)}.`,
+    url: 'https://dat-and-trang-wedding.vercel.app/',
+    type: 'website',
     images: [
       {
-        url: '/logo.png',
-        width: 800,
-        height: 800,
+        url: '/thumbnail.png',
+        width: 1200,
+        height: 630,
         alt: "Đạt & Trang's wedding logo",
       },
     ],
@@ -69,7 +71,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Đạt & Trang's wedding",
     description: `Join us to celebrate the wedding of Đạt & Trang on ${formatDate(EVENTS.celebration.date)}.`,
-    images: ['/logo.png'],
+    images: ['/thumbnail.png'],
   },
 };
 
