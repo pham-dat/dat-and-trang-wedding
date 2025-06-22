@@ -26,7 +26,7 @@ export default function Rsvp({ id }: RsvpProps) {
 
         <p>
           RSVP using the form below so we can plan for your presence. Please do it as soon as
-          possible, preferably before November 2025.
+          possible, preferably before <span className="font-semibold">November 2025</span>.
         </p>
 
         <p>
