@@ -37,8 +37,9 @@ export default function Registry({ id }: RegistryProps) {
           <div className="flex flex-col gap-3 text-justify">
             <p>Your presence at our wedding is the greatest gift of all!</p>
             <p>
-              Howerver, if you wish to contribute, you can do so via PayPal or pay with card via
-              Revolut using the buttons below. Otherwise we also have a card box at the venue.
+              However, if you wish to contribute, you can do so via PayPal or by card through
+              Revolut using the buttons below. Alternatively, there will also be a card box at the
+              venue.
             </p>
           </div>
 

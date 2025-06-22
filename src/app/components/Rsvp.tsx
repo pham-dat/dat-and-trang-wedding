@@ -22,20 +22,16 @@ export default function Rsvp({ id }: RsvpProps) {
       <h1 className="text-5xl lg:text-6xl mb-2 text-center">RSVP</h1>
 
       <div className="mt-2 lg:mt-3 xl:mt-5 2xl:mt-6 flex flex-col gap-3 text-center max-w-7xl">
-        <p>We kindly ask you to let us know if you&apos;ll be able to join our celebration.</p>
-
         <p>
-          RSVP using the form below so we can plan for your presence. Please do it as soon as
-          possible, preferably before <span className="font-semibold">November 2025</span>.
+          We kindly ask you to let us know as soon as possible if you&apos;ll be able to join our
+          celebration, preferably before <span className="font-semibold">November 2025</span>.
         </p>
 
+        <p>Please RSVP using the form below so we can plan for your presence.</p>
+
         <p>
-          On this form, you can choose your menu option, let us know about any allergens and suggest
-          songs you want to add to our wedding playlist!
-        </p>
-        <p>
-          If you would like to give a toast, sing, or perform something, you can also leave us a
-          note there.
+          On this form, you can let us know about your dietary preferences, suggest songs for the
+          dance playlist, or even tell us if you would like to give a toast or perform something!
         </p>
 
         <p>We can&apos;t wait to celebrate this special day with you!</p>

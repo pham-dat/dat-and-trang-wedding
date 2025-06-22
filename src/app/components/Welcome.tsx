@@ -36,10 +36,10 @@ export default function Welcome({ id }: WelcomeProps) {
         <p>
           From there, we slowly got to know each other. Conversations flowed naturally,{' '}
           <span className="font-black">memes</span> were exchanged, and we found our own rhythm.
-          Those chats turned into endless &quot;
-          <span className="font-black">nuits blanches</span>.&quot; We walked through the quiet
-          streets of <span className="font-black">Paris</span>, discovering the city and each other
-          at the same time. We once lay together for hours, watching the{' '}
+          Those chats turned into endless{' '}
+          <span className="font-black">&quot;nuits blanches&quot;</span>. We walked through the
+          quiet streets of <span className="font-black">Paris</span>, discovering the city and each
+          other at the same time. We once lay together for hours watching the{' '}
           <span className="font-black">Perseid meteor shower</span>. Since then, our story has been
           filled with sincerity, connection, and joy.
         </p>

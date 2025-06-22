@@ -34,8 +34,8 @@ export default function DressCode({ id }: DressCodeProps) {
           <p>For our wedding, we wanted every detail to tell a story.</p>
 
           <p>
-            Inspired by vietnamese flower tiles, our dress code is more than just a beautiful
-            pattern, it&apos;s a symbol of harmony and the union of two different souls. These tiles
+            Inspired by Vietnamese flower tiles, our dress code is more than just a beautiful
+            pattern; it&apos;s a symbol of harmony and the union of two different souls. These tiles
             remind us that love is made of many pieces. Like us, building a life together, every
             shared moment becomes something warm, colorful, and meaningful.
           </p>
