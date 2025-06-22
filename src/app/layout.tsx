@@ -53,6 +53,24 @@ const yellowtail = Yellowtail({
 export const metadata: Metadata = {
   title: "Đạt & Trang's wedding",
   description: `Join us to celebrate the wedding of Đạt & Trang on ${formatDate(EVENTS.celebration.date)}.`,
+  openGraph: {
+    title: "Đạt & Trang's wedding",
+    description: `Join us to celebrate the wedding of Đạt & Trang on ${formatDate(EVENTS.celebration.date)}.`,
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 800,
+        alt: "Đạt & Trang's wedding logo",
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Đạt & Trang's wedding",
+    description: `Join us to celebrate the wedding of Đạt & Trang on ${formatDate(EVENTS.celebration.date)}.`,
+    images: ['/logo.png'],
+  },
 };
 
 export default function RootLayout({
