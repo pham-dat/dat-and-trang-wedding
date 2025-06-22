@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { MapPinIcon, ArrowTopRightOnSquareIcon, CalendarDaysIcon } from '@heroicons/react/24/solid';
 
 import { EVENTS } from '@/app/constants';

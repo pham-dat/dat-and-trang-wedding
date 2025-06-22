@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Image from 'next/image';
 
 import welcomeImg from '@/../public/welcome.jpg';

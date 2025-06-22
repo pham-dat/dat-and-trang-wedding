@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
 import SectionSeparator from '@/app/components/SectionSeparator';

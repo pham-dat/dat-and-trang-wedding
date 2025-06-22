@@ -50,6 +50,28 @@ const yellowtail = Yellowtail({
   subsets: ['latin'],
 });
 
+const BODY_CLASS = [
+  beVietnamPro.variable,
+  playfair.variable,
+  playfairDisplay.variable,
+  playfairDisplaySc.variable,
+  yellowtail.variable,
+  'antialiased',
+  'bg-[url(/background-mobile.webp)]',
+  'md:bg-[url(/background.webp)]',
+  'bg-fixed',
+  'bg-cover',
+  'font-text',
+  'text-dark-brown',
+  'h-full',
+  'overflow-auto',
+  'scroll-smooth',
+  'selection:bg-dark-green',
+  'selection:text-light-yellow',
+  'lg:text-lg',
+  'xl:text-xl',
+].join(' ');
+
 export const metadata: Metadata = {
   title: "Đạt & Trang's wedding",
   description: `Join us to celebrate the wedding of Đạt & Trang on ${formatDate(EVENTS.celebration.date)}.`,
@@ -81,13 +103,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full overflow-hidden">
-      <body
-        className={`${beVietnamPro.variable} ${playfair.variable} ${playfairDisplay.variable} ${playfairDisplaySc.variable} ${yellowtail.variable} antialiased bg-[url(/background-mobile.webp)] md:bg-[url(/background.webp)] bg-fixed bg-cover font-text text-dark-brown h-full overflow-auto scroll-smooth selection:bg-dark-green selection:text-light-yellow lg:text-lg xl:text-xl`}
-      >
-        {children}
-        <SpeedInsights />
-      </body>
-    </html>
+    <React.StrictMode>
+      <html lang="en" className="h-full overflow-hidden">
+        <body className={BODY_CLASS}>
+          {children}
+          <SpeedInsights />
+        </body>
+      </html>
+    </React.StrictMode>
   );
 }

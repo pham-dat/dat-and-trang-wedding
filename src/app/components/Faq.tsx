@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SectionSeparator from '@/app/components/SectionSeparator';
 
 interface FaqProps {

@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-
 import NavigationBar from '@/app/components/NavigationBar';
 import Hero from '@/app/components/Hero';
 import Welcome from '@/app/components/Welcome';
