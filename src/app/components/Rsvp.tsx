@@ -9,7 +9,7 @@ interface RsvpProps {
 }
 
 export default function Rsvp({ id }: RsvpProps) {
-  const RSVP_FORM_URL = 'https://forms.gle/your-google-form-link'; // TODO: Replace with actual Google Form URL
+  const RSVP_FORM_URL = 'https://forms.gle/VvkSDVhtKfEXsWKT6';
 
   return (
     <section
