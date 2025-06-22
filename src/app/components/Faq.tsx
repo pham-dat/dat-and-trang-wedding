@@ -27,6 +27,10 @@ const FAQS = [
     q: 'Accommodation?',
     a: 'There are no rooms available at the venue, so please plan your accommodation nearby in advance. If you need assistance, feel free to reach out.',
   },
+  {
+    q: 'Do we need to bring something for the picnic or the brunch?',
+    a: 'You can bring your own food, but it is not required. We will prepare a selection of food and drinks.',
+  },
 ];
 
 export default function Faq({ id }: FaqProps) {
