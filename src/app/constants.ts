@@ -27,7 +27,10 @@ export const EVENTS = {
       { time: '22:00', event: 'Cake cutting' },
       { time: '23:00', event: 'Dancing & party' },
       { time: '', event: '----------' },
-      { time: '10:00', event: 'Brunch' },
+      {
+        time: '10:00',
+        event: 'Brunch (Note: Beware of daylight saving time!)',
+      },
     ],
   },
 };
