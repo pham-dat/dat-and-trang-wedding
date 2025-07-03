@@ -25,6 +25,10 @@ export default function Message() {
 
         <p>We look forward to seeing you soon!</p>
 
+        <div className="italic">
+          And in the end, the love you take is equal to the love you make.
+        </div>
+
         <p>With love,</p>
         <p>Đạt &amp; Trang</p>
       </div>

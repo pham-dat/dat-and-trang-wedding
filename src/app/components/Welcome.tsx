@@ -23,7 +23,7 @@ export default function Welcome({ id }: WelcomeProps) {
         <p>
           Our beautiful love story began with a <span className="font-black">tarte tatin</span> at a
           friend&apos;s birthday. It started unexpectedly, over a shared dessert. One glance, one
-          smile...
+          smile... All you need is love.
         </p>
 
         <p>
@@ -49,7 +49,7 @@ export default function Welcome({ id }: WelcomeProps) {
 
         <p>
           Now, we&apos;re ready for the next chapter and are so happy to share this special day with
-          you.
+          you. We get by with a little help from our friends.
         </p>
       </div>
 
