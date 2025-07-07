@@ -26,6 +26,10 @@ const FAQS = [
     a: 'There are no rooms available at the venue, so please plan your accommodation nearby in advance. If you need assistance, feel free to reach out.',
   },
   {
+    q: 'What language will the wedding celebration be in?',
+    a: 'The celebration will be bilingual: Vietnamese and English. Our parents only understand Vietnamese, and we will have guests from many corners of the world, so we want everyone to feel included! Key moments and speeches will be in both languages.',
+  },
+  {
     q: 'Do we need to bring something for the picnic or the brunch?',
     a: 'You can bring your own food, but it is not required. We will prepare a selection of food and drinks.',
   },
