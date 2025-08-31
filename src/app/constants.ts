@@ -21,8 +21,8 @@ export const EVENTS = {
     type: 'Wedding celebration',
     timeline: [
       { time: '15:00', event: 'Arrivals & welcome drinks' },
-      { time: '16:30', event: 'Outdoor ceremony' },
-      { time: '17:30', event: 'Outdoor cocktail & photos' },
+      { time: '16:00', event: 'Outdoor ceremony' },
+      { time: '17:00', event: 'Outdoor cocktail & photos' },
       { time: '19:00', event: 'Dinner, toasts & games' },
       { time: '22:00', event: 'Cake cutting' },
       { time: '23:00', event: 'Dancing, party & karaoke' },
