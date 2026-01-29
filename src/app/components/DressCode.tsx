@@ -29,7 +29,7 @@ export default function DressCode({ id }: DressCodeProps) {
         />
 
         <div className="flex flex-col gap-3 text-justify">
-          <p>For our wedding, we wanted every detail to tell a story.</p>
+          <p>For our wedding, we want every detail to tell a story.</p>
 
           <p>
             Inspired by Vietnamese flower tiles, our dress code is more than just a beautiful
